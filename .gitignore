@@ -1,0 +1,8 @@
+﻿__pycache__/
+*.pyc
+.venv/
+api-validator/whl/
+api-validator/reports/*.html
+api-validator/reports/*.xlsx
+api-validator/reports/*.json
+!api-validator/reports/sample_comparison_report.json
