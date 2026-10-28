@@ -1,0 +1,40 @@
+[
+  {
+    "endpoint": "/customers/{id}",
+    "method": "GET",
+    "operation_id": "get_customer_by_id",
+    "summary": "Get customer details",
+    "tags": ["Customer"],
+    "headers": [],
+    "query_params": [],
+    "path_params": [
+      {
+        "name": "id",
+        "required": true,
+        "schema": {
+          "type": "integer"
+        },
+        "in": "path"
+      }
+    ],
+    "request_body": null,
+    "responses": [
+      {
+        "status_code": "200",
+        "content_type": "application/json",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "customerId": {
+              "type": "integer"
+            },
+            "name": {
+              "type": "string"
+            }
+          },
+          "required": ["customerId", "name"]
+        }
+      }
+    ]
+  }
+]

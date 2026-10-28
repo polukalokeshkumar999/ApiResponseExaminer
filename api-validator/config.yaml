@@ -1,0 +1,30 @@
+swagger_mhtml_path: "../Swagger UI 3 1.mhtml"
+legacy_base_url: "http://localhost:8081"
+new_base_url: "http://localhost:8082"
+wiremock_url: "http://localhost:9090"
+auth_type: "none"   # none | bearer | basic | apikey
+bearer_token: ""
+basic_auth:
+  username: ""
+  password: ""
+api_key:
+  header_name: "X-API-Key"
+  value: ""
+custom_headers:
+  x-correlation-id: "api-validator-run"
+ignored_fields:
+  - timestamp
+  - requestId
+  - traceId
+  - uuid
+  - createdDate
+  - updatedDate
+timeout: 30
+retry_count: 1
+verify_ssl: false
+run_wiremock_generation: true
+run_test_data_generation: true
+run_legacy_capture: true
+run_newapp_capture: true
+run_comparison: true
+run_schema_validation: true

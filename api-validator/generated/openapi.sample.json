@@ -1,0 +1,45 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Sample Customer API",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/customers/{id}": {
+      "get": {
+        "operationId": "get_customer_by_id",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "customerId": {
+                      "type": "integer"
+                    },
+                    "name": {
+                      "type": "string"
+                    }
+                  },
+                  "required": ["customerId", "name"]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

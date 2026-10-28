@@ -1,0 +1,17 @@
+{
+  "name": "sample_get_customer",
+  "request": {
+    "method": "GET",
+    "urlPathPattern": "^/customers/[^/]+$"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "customerId": 1,
+      "name": "Sample Customer"
+    }
+  }
+}
